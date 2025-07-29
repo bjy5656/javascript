@@ -4,7 +4,25 @@
 //2) 객체에서 이름 키에 해당하는 값들만 출력하기
 //3) 객체에 새로운 속성(학년)을 추가하고 객체 전체 출력하기(for문 사용)
 
+const students = {
+  student : {name : '이름', age : '나이', score : '성적'},
+};
 
+function Student(name, age, score){
+  this.name = name;
+  this.age = age; 
+  this.score = score; 
+}
+
+// student4 = new Student("짱구", 20, 30);
+// console.log(student4);
+// console.log(student4.name);
+
+students.student1 = new Student('철수', 20, 40);
+students.student2 = new Student('짱구', 13, 59);
+students.student3 = new Student('민희', 14, 60);
+
+console.log(students);
 
 
 
@@ -56,7 +74,16 @@ const users = [
 ];
 //id가 2인 객체의 나이를 6으로 변경, subject를 'web표준'으로 변경
 
+for(user of users){
+  if(user.id === 2) {
+    user.age = 6;
+    user.subject = 'web표준';
+  }
+}
+console.log(users);
 
 
 //3) 배열의 요소를 모두 더하여 총합 출력하기
 const numbers2 = [2, 5, 20, 10];
+const number = numbers2.reduce((sum, num) => sum + num);
+console.log(number);
