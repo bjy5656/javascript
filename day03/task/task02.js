@@ -12,7 +12,7 @@ const person2 = {
   score : 60
 }
 console.log(person1);
-console.log(`${person1.name}님은 ${person2.age}살 입장가능여부는 : `+(person1.age > 19 ? '입장가능' : '입장불가'));
+console.log(`${person1.name}님은 ${person1.age}살 입장가능여부는 : `+(person1.age > 19 ? '입장가능' : '입장불가'));
 console.log('이벤트 당첨여부 : '+(person1.age === 10 ? '당첨' : '다음 기회에'));
 console.log(person2);
 console.log(`${person2.name}님은 ${person2.age}살 입장가능여부는 : `+(person2.age > 19 ? '입장가능' : '입장불가'));
@@ -28,7 +28,11 @@ console.log('이벤트 당첨여부 : '+(person2.age === 10 ? '당첨' : '다음
 // 학생이름, 점수는 상수로 설정
 
 console.log(person1);
+//합격 여부 출력하기
 console.log(`${person1.name}님은 ` + (person1.score >= 60 ? '합격' : '불합격') + '입니다');
+//장학생 여부 출력하기
+console.log(`${person1.name}님은 ` + (person1.score === 100 ? '장학생입니다' : '장학생이 아닙니다'));
+
 
 //3. 학생의 이름과 성적을 입력받아서 성적에 따른 학점 출력
 // 90점 이상 : A, 80점 이상 : B,  70점이상 : C, 그외 : F
@@ -44,7 +48,7 @@ console.log(`${person1.name}님은 ` + (person1.score >= 60 ? '합격' : '불합
   }else {
     grade = 'F'
   }
-  console.log(`${person1.name}님의 학점은 ${grade}입니다`);
+  console.log(`${name}님의 학점은 ${grade}입니다`);
 })(person1.name, person1.score);
 
 // console.log(grade);

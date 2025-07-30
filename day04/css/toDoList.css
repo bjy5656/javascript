@@ -1,0 +1,81 @@
+body{
+  background-color: rgba(128, 128, 128, 0.329);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header{
+  height: 200px;
+  width: 100%;
+  background-color: rgba(20, 92, 80, 0.945);
+  padding: 20px 0px 0px 0px;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+ul {
+  /* margin-block-start: 0em; */
+  padding-inline-start: 0px;
+}
+
+header > h1 {
+  text-align: center;
+  color: white;
+}
+
+header > ul {
+  display: flex;
+  height: 30px;
+  padding: 0px 0px 0px 0px;
+}
+
+header > nav {
+  display: flex;
+  justify-content: center;
+}
+
+header  ul > li {
+  list-style-type: none;
+  display: inline-block;
+  height: 30px;
+  border-bottom: 1px solid white;
+  margin: 0px 30px;
+  padding: 0px 10px;
+}
+
+header ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+main{
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  /* height: 100px; */
+  padding: 20px 0px 0px 0px;
+  margin: 25px 0px 0px 0px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.356);
+}
+
+main > h2 {
+  text-align: center;
+  margin: 0px 0px;
+}
+
+main > ul {
+  display: none;
+}
+
+main > button {
+  margin: 20px 0px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+

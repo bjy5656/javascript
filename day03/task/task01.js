@@ -18,12 +18,29 @@ function Student(name, age, score){
 // console.log(student4);
 // console.log(student4.name);
 
+//학생 데이터 추가
 students.student1 = new Student('철수', 20, 40);
 students.student2 = new Student('짱구', 13, 59);
 students.student3 = new Student('민희', 14, 60);
-
 console.log(students);
 
+//이름과 성적 출력
+for(let stu in students){
+  console.log(`이름 : ${students[stu].name}, 성적 : ${students[stu].score}`);
+}
+
+//객체에서 이름 키에 해당하는 값들만 출력하기 
+for(let stu in students){
+  console.log(`이름 : ${students[stu].name}`);
+}
+
+//for문 사용하여 학년 속성을 추가하고 객체 전체 출력 
+let i = 0;
+for(stu in students){
+  students[stu].grade = i;
+  i++;
+}
+console.log(students);
 
 
 

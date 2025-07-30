@@ -58,7 +58,6 @@ const students = [
   {name : '도우너', age : 6, score : 50},
   {name : '또치', age : 5, score : 90},
 ];
-
 let school = {};
 let program = []; 
 // function Student(name, age, score){
@@ -70,27 +69,34 @@ let program = [];
 // const student2 = new Student('도우너', 6, 50);
 // const student3 = new Student('또치', 5, 90);
 
+//학생마다 점수 출력하기 
+for(student of students) {
+  console.log(`이름 : ${student.name}, 점수 : ${student.score}`);
+}
+
+//학생 3명을 프로그램에 등록시키기 
 let i = 0; 
 for(student of students) {
-  ++i;
-  console.log(student.score);
   program[i] = student;
+  i++;
 }
-school.student1 = program[1];
-school.student2 = program[2];
-school.student3 = program[3];
-
 console.log(program);
+
+//학생 정보를 학교 객체에 등록시키기
+school.students = students;
 console.log(school);
 
 
 //5. 포인트를 각각 객체에 추가하고 순서대로 point는 80, 50, 90이다
 //포인트를 모두 더한 값을 출력하라
-school.student1.point = 80;
-school.student2.point = 50;
-school.student3.point = 90;
+school.students[0].point = 80;
+school.students[1].point = 50;
+school.students[2].point = 90;
+console.log(students)
 let sum = 0;
-for(let stu in school){
+for(let stu of school.students){
   sum = sum + stu.point;
 }
 console.log(sum);
+
+
