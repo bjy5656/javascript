@@ -5,17 +5,21 @@
 // 함수명 reverseStr() 콜백사용
 // 참고 : split(), reverse(), join()
 
-// function printStr(callback) {
-//   console.log(callback);
-// }
-// function reverseStr(str) {
-//   let ar = split(str);
-//   let ar2 = ar.reverse();
-//   let ar3 = ar2.join();
-//   return ar3;
-// }
-// printStr(reverseStr("안녕하세요"));
-
+function reverseStr(str, callback){
+  callback(str);
+  let ar = str.split('');
+  callback(ar);
+  let ar2 = ar.reverse(); 
+  callback(ar2);
+  let ar3 = ar2.join(''); 
+  return ar3;
+}
+function printStr(str){
+  console.log(reverseStr(str, (string) => {
+    console.log(string);
+  }))
+};
+printStr("안녕하세요");
 
 //2.  성과 이름을 전달받아서 풀네임을 만든 뒤 000님 환영합니다 출력하기
 

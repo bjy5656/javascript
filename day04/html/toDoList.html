@@ -1,6 +1,7 @@
 <!--  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="./../css/toDoList.css">
   <script defer src="./../js/toDoList.js"></script>
 </head>
+
 <body>
   <header>
     <h1>To-Do List</h1>
@@ -24,8 +26,17 @@
     <h2>Tasks</h2>
     <ul id="task-list">
       <!-- js에서 li태그 추가 -->
+      <li>
+        <form action="">
+          <label for="todo"></label>
+          <input type="checkbox" id="todo">
+          <p>java 멘토씨리즈 - 파일입출력 예제코드작성</p>
+          <button>삭제</button>
+        </form>
+      </li>
     </ul>
     <button id="button">할일 추가</button>
   </main>
 </body>
+
 </html>
