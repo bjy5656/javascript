@@ -3,6 +3,12 @@ const buttons = document.querySelectorAll("main li button");
 const checkBox = document.querySelectorAll("main li input");
 const taskList = document.getElementById("task-list");
 const firstP = document.querySelector("main p");
+// globalThis.
+
+const list = document.createElement("li");
+console.log(list);
+console.log(list.tagName);
+console.log(list.tagName==="li");
 
 addList.addEventListener('click', () => {
   // const form = document.createElement("form");
@@ -22,18 +28,19 @@ addList.addEventListener('click', () => {
   
 });
 
-buttons.forEach((btn) => {
-  btn.addEventListener('click', () => {
+document.querySelectorAll("main li").forEach((list) => {
+  list.addEventListener('click', (e) => {
     let answer = confirm("할일을 삭제하시겠습니까?");
-  if(answer){
-    const lastList = document.querySelector("main li:last-child")
-    taskList.removeChild(lastList);
+  if(answer && e.target.tagName === 'BUTTON'){
+    taskList.removeChild(e.target);
   }
   });
 });
 
-checkBox.addEventListener("click", (e) => {
-  if(e.target.checked){
-
+document.querySelectorAll("main li").forEach((list) => {
+  list.addEventListener('click', (e) => {
+  if(e.target.tagName === 'INPUT'){
+    e.target.style.backgroundColor = "green"
   }
+  });
 });
